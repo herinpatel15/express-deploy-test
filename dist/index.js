@@ -7,7 +7,9 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
-    origin: 'http://localhost:3000', // Replace with your React app's URL
+    origin: 'http://localhost:3000', // Frontend URL (update accordingly)
+    methods: ['GET', 'POST'], // Allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
 }));
 app.use(express_1.default.json());
 app.get('/', (req, res) => {

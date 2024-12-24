@@ -3,7 +3,9 @@ import cors from 'cors';
 
 const app = express()
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your React app's URL
+    origin: 'http://localhost:3000', // Frontend URL (update accordingly)
+    methods: ['GET', 'POST'], // Allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
   }))
 app.use(express.json())
 
